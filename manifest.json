@@ -1,0 +1,9 @@
+{
+    "name": "HLL - Calculator",
+    "short_name": "HLL-C",
+    "lang": "de-DE",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "theme_color": "#e30613",
+    "background_color": "#000000"
+}
