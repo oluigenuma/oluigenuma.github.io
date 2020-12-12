@@ -4,17 +4,17 @@ const history = document.getElementById("history")
 const c = document.getElementById("C")
 
 let inputText = ""
-document.getElementById("1").onclick = add(1)
-document.getElementById("2").onclick = add(2)
-document.getElementById("3").onclick = add(3)
-document.getElementById("4").onclick = add(4)
-document.getElementById("5").onclick = add(5)
-document.getElementById("6").onclick = add(6)
-document.getElementById("7").onclick = add(7)
-document.getElementById("8").onclick = add(8)
-document.getElementById("9").onclick = add(9)
-document.getElementById("0").onclick = add(0)
-c.onclick = reset
+document.getElementById("1").ontouchstart = add(1)
+document.getElementById("2").ontouchstart = add(2)
+document.getElementById("3").ontouchstart = add(3)
+document.getElementById("4").ontouchstart = add(4)
+document.getElementById("5").ontouchstart = add(5)
+document.getElementById("6").ontouchstart = add(6)
+document.getElementById("7").ontouchstart = add(7)
+document.getElementById("8").ontouchstart = add(8)
+document.getElementById("9").ontouchstart = add(9)
+document.getElementById("0").ontouchstart = add(0)
+c.ontouchstart = reset
 
 function add(n) {
     return () => {
