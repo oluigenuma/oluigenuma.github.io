@@ -22,15 +22,18 @@ function add(n) {
             history.innerHTML = input.innerHTML + " " + output.innerHTML
         }
         inputText += n
-        const value = Math.round(978 - (parseInt(inputText)-100) / 4.21348314607)
-        if (value < 622) {
+        if (calc(inputText) < 622) {
             reset()
             inputText = n + ""
         }
         input.innerHTML = inputText + "m"
-        output.innerHTML = Math.round(978 - (parseInt(inputText)-100) / 4.21348314607) + "°"
+        output.innerHTML = calc(inputText) + "°"
         dynamicStart()
     }
+}
+
+function calc(n) {
+    return Math.round(978 - (parseInt(n)-100) / 4.21348314607)
 }
 
 function reset() {
@@ -48,8 +51,11 @@ function dynamicStart() {
         changeClr("color-light")
     }
     timer = setTimeout(() => {
-        inputText = ""
         timer = null
+        if (calc(inputText) > 978) {
+            return
+        }
+        inputText = ""
         changeBg("grey-bg")
         changeClr("color-dark")
     }, 2000)
