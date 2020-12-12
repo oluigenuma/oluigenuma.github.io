@@ -36,6 +36,7 @@ function add(n) {
 function reset() {
     inputText = ""
     changeBg("grey-bg")
+    changeClr("color-dark")
 }
 
 let timer
@@ -44,11 +45,13 @@ function dynamicStart() {
         clearTimeout(timer)
     } else {
         changeBg("yellow-bg")
+        changeClr("color-light")
     }
     timer = setTimeout(() => {
         inputText = ""
         timer = null
         changeBg("grey-bg")
+        changeClr("color-dark")
     }, 2000)
 }
 
@@ -56,4 +59,10 @@ function changeBg(bg) {
     c.classList.remove("yellow-bg")
     c.classList.remove("grey-bg")
     c.classList.add(bg)
+}
+
+function changeClr(clr) {
+    input.classList.remove("color-light")
+    input.classList.remove("color-dark")
+    input.classList.add(clr)
 }

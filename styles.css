@@ -83,3 +83,11 @@ div {
     font-size: 36px;
     color: #f4f0ed54;
 }
+
+.color-light {
+    color: #f4f0ed;
+}
+
+.color-dark {
+    color: #f4f0ed54;
+}
